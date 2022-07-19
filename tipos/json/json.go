@@ -20,7 +20,7 @@ func main() {
 
 	// json para struct
 	var p2 Produto
-	jsonString := `{"id":2,"nome":"Cadeira","preco":690.23,"tags":["Importado","Móvel"]}`
+	jsonString := `{"id":2,"preco":690.23,"nome":"Cadeira","tags":["Importado","Móvel"]}`
 	json.Unmarshal([]byte(jsonString), &p2)
 	fmt.Println(p2.Tags[0])
 }
