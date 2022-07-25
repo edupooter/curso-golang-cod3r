@@ -9,5 +9,5 @@ import (
 
 func main() {
 	fmt.Println(goarea.CalcularAreaCirculo(4.22))
-	fmt.Println(abc.Epa())
+	abc.Epa()
 }
