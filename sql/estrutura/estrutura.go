@@ -23,11 +23,14 @@ func main() {
 		panic(err)
 	}
 
-	if err := db.Ping(); err != nil {
-		// handle error
-	}
-
 	defer db.Close()
 
 	exec(db, "create database if not exists cursogo")
+	exec(db, "use cursogo")
+	exec(db, "drop database if exists usuarios")
+	exec(db, `create table usuarios (
+		id integer auto_increment,
+		nome varchar(80),
+		PRIMARY KEY (id)
+	)`)
 }
