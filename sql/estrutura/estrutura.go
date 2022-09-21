@@ -17,10 +17,14 @@ func exec(db *sql.DB, sql string) sql.Result {
 }
 
 func main() {
-	db, err := sql.Open("mysql", "wsl_root:123456@/@192.168.0.147:3306")
+	db, err := sql.Open("mysql", "wsl_root:123456@tcp(192.168.0.147)/")
 
 	if err != nil {
 		panic(err)
+	}
+
+	if err := db.Ping(); err != nil {
+		// handle error
 	}
 
 	defer db.Close()
