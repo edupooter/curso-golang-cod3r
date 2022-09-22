@@ -27,7 +27,7 @@ func main() {
 
 	exec(db, "create database if not exists cursogo")
 	exec(db, "use cursogo")
-	exec(db, "drop database if exists usuarios")
+	exec(db, "drop table if exists usuarios")
 	exec(db, `create table usuarios (
 		id integer auto_increment,
 		nome varchar(80),
