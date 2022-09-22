@@ -6,4 +6,4 @@ require github.com/edupooter/goarea v0.0.0-20220719230517-f6040c375b38
 
 require github.com/edupooter/html v0.0.0-20220915222843-307f5232f075
 
-require github.com/go-sql-driver/mysql v1.6.0 // indirect
+require github.com/go-sql-driver/mysql v1.6.0
